@@ -1,8 +1,7 @@
-# Carpool
-🚗 Carpool
+# Carpool🚗
 Carpool is a Python-based application designed to facilitate ride-sharing by connecting drivers and passengers heading in the same direction. It leverages the Google Maps Directions API to calculate optimal routes, estimate travel times, and minimize detours, promoting efficient and eco-friendly commuting.
 
-🧩 Features
+#🧩 Features
 Route Calculation: Utilizes the Google Maps Directions API to compute distances, durations, and polylines between origins and destinations.
 
 Flexible Matching: Incorporates configurable parameters such as maximum detour time and time flexibility to match drivers and passengers effectively.
@@ -11,7 +10,7 @@ Modular Architecture: Structured with clear separation of concerns, including co
 
 Environment Configuration: Manages sensitive information like API keys through environment variables for enhanced security.
 
-🗂️ Project Structure
+#🗂️ Project Structure
 bash
 Copy
 Edit
@@ -26,13 +25,14 @@ Carpool/
 ├── requirements.txt  # Python dependencies
 ├── .gitignore        # Specifies files to ignore in version control
 └── README.md         # Project documentation
-🚀 Getting Started
+
+#🚀 Getting Started
 Prerequisites
 Python 3.8 or higher
 
 A Google Maps API key
 
-Installation
+#Installation
 Clone the Repository
 
 bash
