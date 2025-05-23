@@ -1,86 +1,100 @@
-# Carpool🚗
-Carpool is a Python-based application designed to facilitate ride-sharing by connecting drivers and passengers heading in the same direction. It leverages the Google Maps Directions API to calculate optimal routes, estimate travel times, and minimize detours, promoting efficient and eco-friendly commuting.
+# 🚗 Carpool
 
-#🧩 Features
-Route Calculation: Utilizes the Google Maps Directions API to compute distances, durations, and polylines between origins and destinations.
+**Carpool** is a Python-based ride-sharing application that connects _drivers_ and _passengers_ heading in the same direction.  
+It uses the **Google Maps Directions API** to calculate optimal routes, estimate travel time, and minimize detours — promoting efficient and eco-friendly commuting.
 
-Flexible Matching: Incorporates configurable parameters such as maximum detour time and time flexibility to match drivers and passengers effectively.
+---
 
-Modular Architecture: Structured with clear separation of concerns, including configuration, data models, services, UI, and utilities.
+## ✨ Features
 
-Environment Configuration: Manages sensitive information like API keys through environment variables for enhanced security.
+- **Route Calculation**: Powered by Google Maps to calculate distance, duration, and route paths.
+- **Smart Matching**: Configurable detour and time flexibility settings for intelligent driver-passenger pairing.
+- **Modular Design**: Organized into configuration, data models, services, UI, and utility modules.
+- **Secure Config**: Uses `.env` for API key management to keep credentials out of source control.
 
-#🗂️ Project Structure
-bash
-Copy
-Edit
+---
+
+## 📁 Project Structure
+
 Carpool/
-├── config/           # Configuration settings and environment variables
-├── models/           # Data models (e.g., Coordinates)
-├── services/         # Core services (e.g., routing logic)
-├── ui/               # User interface components
-├── utils/            # Utility functions
-├── tests/            # Unit tests
-├── main.py           # Entry point of the application
-├── requirements.txt  # Python dependencies
-├── .gitignore        # Specifies files to ignore in version control
-└── README.md         # Project documentation
+├── config/ # Configuration settings
+├── models/ # Data models (e.g., Coordinates)
+├── services/ # Routing logic and API calls
+├── ui/ # User interface logic
+├── utils/ # Helper functions
+├── main.py # Application entry point
+├── requirements.txt # Python dependencies
+├── .gitignore # Ignored files
+└── README.md # Project documentation
 
-#🚀 Getting Started
-Prerequisites
-Python 3.8 or higher
-
-A Google Maps API key
-
-#Installation
-Clone the Repository
-
-bash
+yaml
 Copy
 Edit
-git clone https://github.com/fakhrialimin/Carpool.git
-cd Carpool
-Create a Virtual Environment
+
+---
+
+## 🚀 Getting Started
+
+### ✅ Prerequisites
+
+- Python 3.8+
+- A Google Maps API key
+
+### 📦 Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/fakhrialimin/Carpool.git
+   cd Carpool
+Create a virtual environment
 
 bash
 Copy
 Edit
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-Install Dependencies
+source venv/bin/activate  # Windows: venv\Scripts\activate
+Install dependencies
 
 bash
 Copy
 Edit
 pip install -r requirements.txt
-Set Up Environment Variables
-
-Create a .env file in the root directory and add your Google Maps API key:
+Create a .env file
+In the root directory, add your Google Maps API key:
 
 ini
 Copy
 Edit
 GMAPS_API_KEY=your_api_key_here
-Run the Application
+Run the application
 
 bash
 Copy
 Edit
 python main.py
 🧪 Running Tests
-To execute the unit tests:
+To run all tests in the tests/ folder:
 
 bash
 Copy
 Edit
 python -m unittest discover tests
-🛠️ Configuration
-Adjust the following parameters in config/settings.py to fine-tune the application's behavior:
+⚙️ Configuration
+You can adjust the following in config/settings.py:
 
-RESIDENTIAL_AREA_RADIUS: Radius (in meters) to consider for residential areas.
+python
+Copy
+Edit
+GMAPS_API_KEY = "your_key_here"
+RESIDENTIAL_AREA_RADIUS = 10000       # in meters
+DESTINATION_RADIUS = 2000             # in meters
+MAX_DETOUR_MIN = 30                   # in minutes
+TIME_FLEXIBILITY_MIN = 30             # in minutes
+📄 License
+This project is licensed under the Uni 'Stuttgart license
 
-DESTINATION_RADIUS: Radius (in meters) around the destination for matching.
+🙋‍♂️ Contributing
+Contributions are welcome! Feel free to fork the repo and submit pull requests.
 
-MAX_DETOUR_MIN: Maximum allowable detour time in minutes.
-
-TIME_FLEXIBILITY_MIN: Time flexibility in minutes for matching rides.
+🧠 Author
+Built with ❤️ by fakhrialimin
