@@ -1,0 +1,5 @@
+PyQt5==5.15.7 
+PyQtWebEngine==5.15.6 
+folium==0.14.0 
+googlemaps==4.10.0 
+python-dotenv==1.0.0
